@@ -5,9 +5,6 @@ import org.slf4j.LoggerFactory;
 import dev.jwall64.mcdl.MinecraftVersion;
 import dev.jwall64.mcdl.Task;
 import dev.jwall64.mdcfg.ConfigSection;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.File;
 import java.io.FileOutputStream;
