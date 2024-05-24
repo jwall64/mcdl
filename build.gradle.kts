@@ -14,13 +14,22 @@ application.mainClass.set("dev.jwall64.mcdl.Main")
 java.sourceCompatibility = JavaVersion.VERSION_17
 java.targetCompatibility = JavaVersion.VERSION_17
 
-configurations.create("shade").setExtendsFrom(listOf(configurations.getByName("implementation")))
-
 repositories {
     mavenCentral()
     maven("https://maven.jwall64.dev/releases")
     maven("https://libraries.minecraft.net/")
-    mavenLocal()
+}
+
+configurations.shadow {
+    extendsFrom(configurations.implementation.get())
+}
+
+tasks.jar {
+    archiveClassifier.set("partial")
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
 }
 
 dependencies {
