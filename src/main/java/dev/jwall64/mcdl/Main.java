@@ -19,10 +19,11 @@ public class Main {
                 .addOption("jarName", "minecraft_server.jar")
                 .addOption("serverWorkingDir")
                 .addOption("port", 'p')
+                .addOption("stopCommand", "stop")
+                .addOption("jvmArgsVariable", "MC_JVM_ARGS")
                 .addFlag("acceptEula", 'e')
                 .addFlag("skipFirstLaunch", 's')
                 .addFlag("generateScripts", 'g')
-                .addOption("stopCommand", "stop")
                 // Fabric
                 .addOption("fabricInstallerVersion", "latest")
                 .addOption("fabricInstallerJarName", "fabric-installer.jar")
