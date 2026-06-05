@@ -161,9 +161,9 @@ public class FileUtil {
         boolean windows = System.getProperty("os.name").startsWith("Windows");
 
         if(windows) {
-            cmd.append(" %").append(queue.getConfig().getSection("jvmArgsVariable")).append("%");
+            cmd.append(" %").append(queue.getConfig().getString("jvmArgsVariable")).append("%");
         } else {
-            cmd.append(" $").append(queue.getConfig().getSection("jvmArgsVariable"));
+            cmd.append(" $").append(queue.getConfig().getString("jvmArgsVariable"));
         }
 
         cmd.append(" -jar ").append(workingDir.toPath().toAbsolutePath().relativize(jar.toPath().toAbsolutePath())).append(" nogui");
