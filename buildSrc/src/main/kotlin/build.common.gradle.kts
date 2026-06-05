@@ -29,7 +29,7 @@ java {
 }
 
 tasks.withType<Jar> {
-    archiveBaseName.set(Utils.getArchiveName(project, rootProject))
+    archiveBaseName.set(Utils.getArchiveName(project))
 }
 
 tasks.named<Test>("test") {

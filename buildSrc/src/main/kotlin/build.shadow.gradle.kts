@@ -2,7 +2,7 @@ import buildlogic.Utils
 
 plugins {
     id("build.common")
-    id("com.github.johnrengelman.shadow")
+    id("com.gradleup.shadow")
     id("maven-publish")
 }
 
@@ -16,7 +16,7 @@ tasks {
 }
 
 tasks.shadowJar {
-    archiveBaseName.set(Utils.getArchiveName(project, rootProject))
+    archiveBaseName.set(Utils.getArchiveName(project))
     archiveClassifier.set("")
 }
 

@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
 
+    compileOnly("org.jetbrains:annotations:26.1.0")
+
     implementation(libs.midnight.cfg)
     implementation(libs.midnight.cfg.json)
     implementation(libs.slf4j.api)
