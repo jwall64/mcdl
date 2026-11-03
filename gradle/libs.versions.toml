@@ -1,5 +1,5 @@
 [versions]
-mdcfg = "3.5.3"
+mdcfg = "3.5.6"
 slf4j = "2.0.11"
 
 [libraries]
